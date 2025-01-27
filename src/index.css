@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+:root{  
+  --cyan1:hsl(180, 52%, 96%);
+  --cyan2:hsl(180, 31%, 95%);
+  --cyan3:hsl(180, 29%, 50%);
+  --cyan4:hsl(180, 8%, 52%);
+  --cyan5:hsl(180, 14%, 20%);
+ /* 
+- Desaturated Dark Cyan: hsl(180, 29%, 50%) 
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+ */
+}
+body {
+  margin: 0;
+  font-family: League Spartan,  sans-serif;
+  
+  background-color: var(--cyan1);
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main{
+
+}
+
+
+p{
+  margin: 0;
+}
