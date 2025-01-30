@@ -1,5 +1,78 @@
-.jobCard{
+/* .jobCard{
+   
     background-color: white;
-    box-shadow: 0px 10px 10px var(--cyan5);
+  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+} */
+
+.job-card {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+
+
+    background-color: white;
+    /*   box-shadow: 0px 10px 30px var(--cyan3); */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.job-logo {
+    position: absolute;
+    top: -25px;
+    left: 3%;
+    width: 10%;
+    max-width: 50px;
+    aspect-ratio: 1/1;
+    /* Sicherstellen, dass es ein Kreis bleibt */
+    border-radius: 50%;
+    background-color: white;
+    /* Falls das SVG keinen Hintergrund hat */
+    /*  padding: 5px;  */
+    /*  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+
+
+
+
+
+
+
+}
+
+.company {
+    color: var(--cyan3);
+
+}
+
+.position {}
+
+.jobinfo {
+    color: var(--cyan4);
+}
+
+.languageTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.tag {
+    background-color: var(--cyan2);
+    color: var(--cyan3);
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: var(--cyan3);
+    color: white;
 }
