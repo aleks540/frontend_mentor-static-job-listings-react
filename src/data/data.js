@@ -13,6 +13,7 @@ export const jobs =[
         location: "USA Only",
         languages: ["HTML", "CSS", "JavaScript"],
         tools: []
-      }
+      },
+      
      
 ]

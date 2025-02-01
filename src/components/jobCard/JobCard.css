@@ -8,51 +8,80 @@
     border-radius: 5px;
     overflow: hidden;
 } */
+:root {
+    --logoWidth: 50px;
+    --logoTop: calc(var(--logoWidth) / -2);
+    --marginTopCard: calc((var(--logoTop) * -1) + 10px);
+    --marginTopjobInfoContainer: calc((var(--logoTop) * -1) - 15px);
+}
+
+
 
 .job-card {
     position: relative;
     font-size: 15px;
     font-weight: 500;
-
-
+    line-height: 150%;
     background-color: white;
-    /*   box-shadow: 0px 10px 30px var(--cyan3); */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: var(--marginTopCard);
     padding: 20px;
     border-radius: 5px;
     overflow: visible;
+   
+}
+
+.jobInfoContainer {
+    margin-top: var(--marginTopjobInfoContainer);
 }
 
 .job-logo {
     position: absolute;
-    top: -25px;
-    left: 3%;
-    width: 10%;
-    max-width: 50px;
+    width: var(--logoWidth);
+    height: var(--logoWidth);
+    left: 20px;
+    top: var(--logoTop);
     aspect-ratio: 1/1;
-    /* Sicherstellen, dass es ein Kreis bleibt */
     border-radius: 50%;
     background-color: white;
-    /* Falls das SVG keinen Hintergrund hat */
-    /*  padding: 5px;  */
-    /*  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+}
 
-
-
-
-
-
-
+.firstLine {
+    display: flex;
+    gap:1rem;
 }
 
 .company {
     color: var(--cyan3);
-
 }
 
-.position {}
 
+.newTag {
+    color: var(--cyan1);
+    background-color: var(--cyan3);
+    border-radius:calc(20px + 0.2rem);
+    text-align: center;
+    height: 20px;
+    padding: 0.1rem 0.5rem;
+}
+.featuredTag{
+    color: var(--cyan1);
+    background-color: var(--cyan5);
+    border-radius: calc(20px + 0.2rem);
+    text-align: center;
+    height: 20px;
+    padding: 0.1rem 0.5rem;
+}
+.position{
+    
+    font-weight: 900;
+}
+.position:hover{
+    color: var(--cyan3);
+    font-weight: 900;
+}
 .jobinfo {
     color: var(--cyan4);
 }
@@ -61,18 +90,65 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
 }
 
 .tag {
     background-color: var(--cyan2);
     color: var(--cyan3);
     border-radius: 2px;
-    padding: 2px;
+    padding: 2px 10px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .tag:hover {
     background-color: var(--cyan3);
     color: white;
+}
+
+@media only screen and (min-width: 375px) {
+    :root {
+        --logoWidth: 80px;
+    }
+
+    .job-card {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1380px;
+        margin: 1rem;
+    }
+
+    .jobInfoContainer {
+        margin-top: 0;
+    }
+
+    .job-logo {
+        position: static;
+        width: var(--logoWidth);
+        height: var(--logoWidth);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    .leftContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .languageTags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .job-card {
+        margin: 1rem auto;
+    }
 }

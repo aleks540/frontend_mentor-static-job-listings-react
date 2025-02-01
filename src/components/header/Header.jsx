@@ -14,7 +14,7 @@ const Header = () => {
         <img
         src={isMobile ? MobileHeaderSVG : DesktopHeaderSVG}
         alt="Header SVG"
-        className="w-full h-auto"
+        className="w-full"
       />
       </div>
 
