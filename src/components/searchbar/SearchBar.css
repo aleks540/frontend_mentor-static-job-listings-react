@@ -1,27 +1,52 @@
-.searchBarContainer{
+.searchBarContainer {
     height: 20px;
-   /*  width: 80%; */
+    /*  width: 80%; */
     background-color: white;
-    
+
     margin: 10px auto;
     border-radius: 5px;
     text-align: center;
     align-items: center;
-    top: 50%;     
-    transform: translate(0, -50%);     
-    z-index: 10; 
-    padding: 10px 20px;   
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    padding: 10px 20px;
     z-index: 10;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-left: 10px;
     margin-right: 10px;
 }
-.searchBarContainer{
+
+.searchBarContainer {
     display: flex;
     justify-content: space-between;
 }
+.removeSearch{
+    background-color: white;
+    border: none;
+    color: var(--cyan5);
+    font-weight: 550;
+    cursor: pointer;
+}
 
 
-@media only screen and (min-width: 375px) {
-    
+.removeSearch:hover{
+    color: var(--cyan3);
+    font-weight: 550;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 440px) {
+    .searchBarContainer {
+        max-width: 1380px;
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .searchBarContainer {
+        margin: 1rem auto;
+    }
 }

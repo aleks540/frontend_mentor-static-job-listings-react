@@ -42,6 +42,7 @@
    justify-content: center;
 }
 
-.close-button:hover {
+.searchTagClose:hover {
     background-color: var(--cyan5);
+    cursor: pointer;
 }

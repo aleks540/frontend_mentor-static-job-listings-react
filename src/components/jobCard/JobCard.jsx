@@ -5,12 +5,21 @@ import { useMediaQuery } from '@mui/material';
 
 
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job,setTags }) => {
     const isMobile = useMediaQuery("(max-width: 439px)");
     const { company, logo, position, postedAt, contract, location, languages, tools, new: isNew, featured:isfeatured } = job
     const tags = [...languages, ...tools];
 
-
+    const searchTag = (tag) => {       
+    
+        setTags((prevTags) => {
+           
+            if (prevTags.includes(tag)) {
+                return prevTags;
+            }
+            return [...prevTags, tag];
+        });
+    };
 
     return (
 
@@ -35,7 +44,7 @@ const JobCard = ({ job }) => {
 
             <div className='languageTags'>
                 {tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="tag">{tag}</span>
+                    <span key={tagIndex} className="tag"  label={tag}  onClick={() => searchTag(tag)}>{tag}</span>
                 ))}
             </div>
 
