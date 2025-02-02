@@ -6,7 +6,7 @@ import { useMediaQuery } from '@mui/material';
 
 
 const JobCard = ({ job }) => {
-    const isMobile = useMediaQuery("(max-width: 375px)");
+    const isMobile = useMediaQuery("(max-width: 439px)");
     const { company, logo, position, postedAt, contract, location, languages, tools, new: isNew, featured:isfeatured } = job
     const tags = [...languages, ...tools];
 

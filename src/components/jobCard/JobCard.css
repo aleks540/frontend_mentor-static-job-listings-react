@@ -76,11 +76,11 @@
 }
 .position{
     
-    font-weight: 900;
+    font-weight: 700;
 }
 .position:hover{
     color: var(--cyan3);
-    font-weight: 900;
+    font-weight: 700;
 }
 .jobinfo {
     color: var(--cyan4);
@@ -106,9 +106,9 @@
     color: white;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 440px) {
     :root {
-        --logoWidth: 80px;
+        --logoWidth: 5rem;
     }
 
     .job-card {

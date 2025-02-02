@@ -10,7 +10,7 @@ const Header = () => {
     const desktopSVG = "../../img/bg-header-desktop.svg";  */ 
 
     return (
-        <div className='header'>
+        <div className='header '>
         <img
         src={isMobile ? MobileHeaderSVG : DesktopHeaderSVG}
         alt="Header SVG"
