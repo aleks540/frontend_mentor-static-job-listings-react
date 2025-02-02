@@ -1,14 +1,8 @@
-.SearchTagButton {
-    /* display: flex;
-    justify-content: space-between;
-   
-    padding: 2px 5px;
-    border: 2px solid black; */
+.SearchTagButton {   
     display: inline-flex;
     align-items: center;
     background-color: var(--cyan2);
-    color: white;
-    
+    color: white;    
     border-radius: 2px;
     font-size: 14px;
     font-family: Arial, sans-serif;
@@ -20,16 +14,13 @@
     color: var(--cyan3);
     font-weight: 550;
     padding-left: 5px;
-
 }
 
 .searchTagClose {
     height: 100%;
     background-color: var(--cyan3);
     color: var(--cyan1);
-    border: none;
-   
-    
+    border: none;       
     font-size: 16px;
     display: flex;
     align-items: center;

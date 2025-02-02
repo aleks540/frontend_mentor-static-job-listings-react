@@ -1,9 +1,7 @@
 .searchBarContainer {
-    height: 20px;
-    /*  width: 80%; */
+    height: 20px;    
     background-color: white;
-
-    margin: 10px auto;
+    
     border-radius: 5px;
     text-align: center;
     align-items: center;
@@ -41,12 +39,12 @@
 @media only screen and (min-width: 440px) {
     .searchBarContainer {
         max-width: 1380px;
-        margin: 1rem;
+        margin:0 1rem;
     }
 }
 
 @media only screen and (min-width: 1440px) {
     .searchBarContainer {
-        margin: 1rem auto;
+        margin: 0 auto;
     }
 }

@@ -14,6 +14,13 @@ function App() {
     setJobs(jobData);
   }, []);
 
+  const filteredJobs = jobData.filter(job => {
+    if (tags.length === 0) return true; 
+
+    const jobTags = [...job.languages, ...job.tools]; 
+    return tags.every(tag => jobTags.includes(tag)); 
+});
+
 
   return (
     <>
@@ -21,7 +28,8 @@ function App() {
       { <SearchBar tags={tags} setTags={setTags}/>}
  
       <main>
-        {jobs.map((job) => (
+
+        {filteredJobs.map((job) => (
           <JobCard key={job.id} job={job} setTags={setTags} />
         ))}
       </main>

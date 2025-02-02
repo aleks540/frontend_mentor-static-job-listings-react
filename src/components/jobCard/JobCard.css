@@ -15,7 +15,9 @@
     --marginTopjobInfoContainer: calc((var(--logoTop) * -1) - 15px);
 }
 
-
+.cardWrapper{
+    border: 2px solid black;
+}
 
 .job-card {
     position: relative;
