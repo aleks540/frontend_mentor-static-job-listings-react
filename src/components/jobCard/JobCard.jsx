@@ -10,6 +10,7 @@ const JobCard = ({ job, setTags }) => {
     const { company, logo, position, postedAt, contract, location, languages, tools, new: isNew, featured: isfeatured } = job
     const tags = [...languages, ...tools];
 
+
     const searchTag = (tag) => {
 
         setTags((prevTags) => {
@@ -17,23 +18,27 @@ const JobCard = ({ job, setTags }) => {
             if (prevTags.includes(tag)) {
                 return prevTags;
             }
-            
             return [...prevTags, tag];
-            
+
         });
-        
+
     };
+
+
 
     return (
         <div className="job-card">
-            <div className='leftContent'>
+            {isfeatured && isNew && <div class="sidecolor"></div>}
+
+            <div className='jobContent'>
                 <img src={logo} alt={`${company} Logo`} className="job-logo" />
                 <div className="jobInfoContainer">
                     <div className="firstLine">
                         <p className='company'>{company}</p>
-                        {isNew && <div className='newTag'>NEW!</div>}
-                        {isfeatured && <div className='featuredTag'>FEATURED</div>}
-
+                        <div className="newFeaturedTags">
+                            {isNew && <div className='newTag'>NEW!</div>}
+                            {isfeatured && <div className='featuredTag'>FEATURED</div>}
+                        </div>
                     </div>
                     <p className='position'>{position}</p>
                     <div className='jobinfo'>
